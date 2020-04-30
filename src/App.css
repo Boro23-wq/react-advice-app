@@ -1,0 +1,116 @@
+#root, html, body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.app {
+    height: 100%;
+    background: url('./images/city_dusk.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    background-image: linear-gradient(to right, rgba(255,0,0,0), #FF3E4D);;
+    opacity: 1;
+    color: white;
+    width: 40%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    padding: 2%;
+    box-shadow: 4px 4px 5px ;
+}
+
+.heading { 
+display: flex;
+align-items: center;
+height: 450px;
+font-size: 1.6em;
+font-family: 'Metrophobic', sans-serif;
+}
+
+.button {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 200px;
+    width: 150px;
+    opacity: 1;
+    background-color: #AE1438;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+    
+  .button span {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+  }
+    
+  .button:hover {
+    animation: rotate 0.7s ease-in-out both;
+  }
+    
+  .button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+  }
+    
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+    
+  @keyframes storm {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  }  
+  
+  @media only screen and (max-width: 600px) {
+    .card {
+        width: 80%;
+        height: 30%;
+    }
+  }
